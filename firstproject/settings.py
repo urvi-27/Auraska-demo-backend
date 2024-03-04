@@ -129,9 +129,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# MESSAGE_TAGS={
-#     # messages.ERROR:'danger'
+MESSAGE_TAGS={
+    messages.ERROR:'danger'
 #     # messages.SUCCESS:'success',
 #     # messages.INFO:'info',
 #     # messages.WARNING:'warning'
-# }
+}

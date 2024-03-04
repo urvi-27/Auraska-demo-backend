@@ -1,0 +1,40 @@
+{% extends 'admin_base.html' %}
+{% block content %}
+{% load static %}
+<div class="admin-register">
+    <div class="admin-width">
+        <form class="register" method="POST" action="{%  url 'admin_register' %}">
+            {% csrf_token %}
+            <div class="header">
+                <p>REGISTER</p>
+            </div>
+            {% for message in messages %}
+            <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                <strong></strong> {{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            <label for="name" class="first-name">First Name:</label>
+            <input type="text" id="name" name="first-name" required>
+
+            <label for="name">Last Name:</label>
+            <input type="text" id="name" name="last-name" required>
+
+            <label for="name">Email Address:</label>
+            <input type="email" id="name" name="email" required>
+
+            <label for="name" class="username">Username:</label>
+            <input type="text" id="name" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password">Confirm Password:</label>
+            <input type="password" id="password" name="confirm-password" required>
+
+            <button type="submit">Register</button>
+            <button class="button-back"><a href="{% url 'admin_login' %}">Back</a></button>
+        </form>
+    </div>
+</div>
+{% endblock content %}

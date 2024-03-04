@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="second-block">
+    <div class="second-block__img">
+        <img src="{% static 'img/sigmund-taxUPTfDkpc-unsplash.jpg' %}" alt="" class="second-block__img--under-img">
+    </div>
+</div>
+<div class="page-width">
+    <div class="contact-block">
+        <div class="contact-block--title">
+            <p> Send Us a Message </p>
+        </div>
+        <div class="contact-block__info">
+            <div class="contact-block__info__form">
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                    <strong></strong> {{message}}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endfor %}
+                <form class="contact_form" method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <div class="contact-block__info__form--name">
+                        <p> Name* </p>
+                        <input type="text" name="name">
+                    </div>
+                    <div class="contact-block__info__form--email">
+                        <p> Email* </p>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="contact-block__info__form--subject">
+                        <p> Subject* </p>
+                        <input type="text" name="subject">
+                    </div>
+                    <div class="contact-block__info__form--message">
+                        <p> Message* </p>
+                        <input type="text" name="message">
+                    </div>
+                    <div class="contact-block__info__form--button">
+                        <button type="submit"> Send Message </button>
+                    </div>
+                </form>
+            </div>
+            <div class="contact-block__info__details">
+                <div class="contact-block__info__details--title">
+                    <p> Contact Details </p>
+                </div>
+                <div class="contact-block__info__details__description">
+                    <p class="contact-block__info__details__description--text"> Get in touch with us today for any
+                        inquiries or more information </p>
+                    <p class="contact-block__info__details__description--email"> Info@Auraska.Ke </p>
+                    <p class="contact-block__info__details__description--number"> +254 100 100 809 </p>
+                    <p class="contact-block__info__details__description--address"> Unit 6 Mirage Towers 3, </p>
+                    <p class="contact-block__info__details__description--road"> Waiyaki Way, </p>
+                    <p class="contact-block__info__details__description--city"> Nairobi </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="second-block">
+    <div class="second-block__img">
+        <img src="{% static 'img/Screenshot 2024-01-22 150811 MAP.png' %}" alt="" class="second-block__img--under-img">
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="page-width">
+    <div class="news-block">
+        <div class="news-block--title">
+            <p> In the News </p>
+        </div>
+        <div class="news-block__cards">
+            {% for news in news %}
+            <div class="news-block__cards__1">
+                <div class="news-block__cards__1--img">
+                    <img src="{{ news.images.url }}"
+                        alt="">
+                </div>
+                <div class="news-block__cards__1--text">
+                    <p>{{ news.name }} </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="newsletter-block">
+        <div class="newsletter-block--title">
+            <p> We are ready when you are. </p>
+            <p> Contact us today. </p>
+        </div>
+        <div class="newsletter-block--button">
+            <button> Get in touch today </button>
+        </div>
+    </div>
+</div>
+{% endblock content %}

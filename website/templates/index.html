@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="second-block">
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong></strong> {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    <div class="second-block__img">
+        <img src="{% static 'img/Odoo-partner-1183882812.jpg' %}" alt="" class="second-block__img--under-img">
+        <img src="{% static 'img/odoo_ERP-copy-528040177.png' %}" alt="" class="second-block__img--over-img">
+    </div>
+</div>
+<div class="third-block">
+    <div class="third-block__description">
+        <div class="third-block__description--width">
+            <div class="third-block__description--title">
+                <p>Leading Digital Adoption for Micro, Small and Medium Enterprises</p>
+            </div>
+            <div class="third-block__description--text">
+                <p>We offer solutions that help you manage better, from Odoo ERP, to SAAS Solutions to apartment
+                    management solutions.</p>
+            </div>
+            <div class="third-block__description--button">
+                <button> Get in touch</button>
+            </div>
+        </div>
+    </div>
+    <div class="third-block--img">
+        <img src="{% static 'img/istockphoto-1474166561-170667ahkk.jpg' %}" alt="">
+    </div>
+</div>
+<div class="page-width">
+    <div class="service-block">
+        <div class="service-block--title">
+            <p>Our Services</p>
+        </div>
+        <div class="service-block__card1">
+            <div class="service-block__card1__description">
+                <div class="service-block__card1__description--width">
+                    <div class="service-block__card1__description--title">
+                        <p> Odoo ERP Implementations </p>
+                    </div>
+                    <div class="service-block__card1__description--text">
+                        <p> Implementation, Upgrade and Support services for Odoo ERP. We have a large team of Odoo
+                            specialists to help restructure your business processes and implement Best Practices as
+                            imbibed in the Odoo ERP </p>
+                    </div>
+                    <div class="service-block__card1__description--button">
+                        <button> <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="service-block__card1--img">
+                <img src="{% static 'img/illustrations/odoo.png' %}" alt="">
+            </div>
+        </div>
+        <div class="service-block__card2">
+            <div class="service-block__card2__description">
+                <div class="service-block__card2__description--width">
+                    <div class="service-block__card2__description--title">
+                        <p> SaaS Solutions for #SmallBiz </p>
+                    </div>
+                    <div class="service-block__card2__description--text">
+                        <p> Pre-Packaged Cloud Based Solutions for Small Businesses. that include Kenya Payroll, POS
+                            solutions on an affordable Monthly Subscription </p>
+                    </div>
+                    <div class="service-block__card2__description--button">
+                        <button> <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="service-block__card2--img">
+                <img src="{% static 'img/illustrations/saas.png' %}" alt="">
+            </div>
+        </div>
+        <div class="service-block__card3">
+            <div class="service-block__card3__description">
+                <div class="service-block__card3__description--width">
+                    <div class="service-block__card3__description--title">
+                        <p> Apartment Management </p>
+                    </div>
+                    <div class="service-block__card3__description--text">
+                        <p> End to End solutions for Apartment Management that include Visitor Management, Intercom,
+                            Parking, Staff, Accounting etc.
+                            All in One offering!</p>
+                    </div>
+                    <div class="service-block__card3__description--button">
+                        <button> <i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                    </div>
+                </div>
+            </div>
+            <div class="service-block__card3--img">
+                <img src="{% static 'img/illustrations/house.png' %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="indstries-block">
+        <div class="indstries-block--title">
+            <p> Industries we serve </p>
+        </div>
+        <div class="industries-block__cards">
+            <div class="indstries-block__cards__content">
+                <div class="indstries-block__cards__content--financial-sector">
+                    <p> Financial Sector </p>
+                </div>
+                <div class="indstries-block__cards__content--egovernance">
+                    <p> eGovernance </p>
+                </div>
+                <div class="indstries-block__cards__content--ngos">
+                    <p> NGOs </p>
+                </div>
+                <div class="indstries-block__cards__content--manufacturing">
+                    <p> Manufacturing </p>
+                </div>
+                <div class="indstries-block__cards__content--telecommunication">
+                    <p> Telecommunication </p>
+                </div>
+            </div>
+            <div class="industries-block__cards__financial">
+                <p class="industries-block__cards__financial--title"> Financial Sector </p>
+                <p class="indstries-block__cards__financial--text"> We offer financial institutions with solutions to
+                    manage their operations efficiently, process transactions, and meet compliance standards. These
+                    solutions help financial institutions reduce costs, increase productivity and offer better services
+                    to their customers. </p>
+                <p class="industries-block__cards__financial--link"> Click here to Know More </p>
+            </div>
+        </div>
+    </div>
+    <div class="news-block">
+        <div class="news-block--title">
+            <p> In the News </p>
+        </div>
+        <div class="news-block__cards">
+            <div class="news-block__cards__1">
+                <div class="news-block__cards__1--img">
+                    <img src="{% static 'img/Screenshot 2023-11-27 at 10-25-23 Photo by Getty Images on Unsplash.png' %}"
+                        alt="">
+                </div>
+                <div class="news-block__cards__1--text">
+                    <p> How to use Odoo across multiple devices seamlessly </p>
+                </div>
+            </div>
+            <div class="news-block__cards__2">
+                <div class="news-block__cards__2--img">
+                    <img src="{% static 'img/Auraska Nomination.png' %}" alt="">
+                </div>
+                <div class="news-block__cards__2--text">
+                    <p> Auraska nomminated for Best Starter - Africa </p>
+                </div>
+            </div>
+            <div class="news-block__cards__3">
+                <div class="news-block__cards__3--img">
+                    <img src="{% static 'img/sigmund-LCun3uxh-z0-unsplash.jpg' %}" alt="">
+                </div>
+                <div class="news-block__cards__3--text">
+                    <p> How does Odoo help move your business to the digital world? </p>
+                </div>
+            </div>
+        </div>
+        <div class="news-block--button">
+            <button> More News </button>
+        </div>
+    </div>
+    <div class="case-studies-block">
+        <div class="case-studies-block--title">
+            <p> Case studies </p>
+        </div>
+        <div class="case-studies-block__cards">
+            <div class="case-studies-block__cards__1">
+                <div class="case-studies-block__cards__1--img">
+                    <img src="{% static 'img/Screenshot 2023-11-27 at 10-24-52 Photo by Getty Images on Unsplash.png' %}"
+                        alt="">
+                </div>
+                <div class="case-studies-block__cards__1--text">
+                    <p> This is a Case study highlighting a project worked on </p>
+                </div>
+            </div>
+            <div class="case-studies-block__cards__2">
+                <div class="case-studies-block__cards__2--img">
+                    <img src="{% static 'img/Odoo-Restaurant-P2-1233534535.jpg' %}" alt="">
+                </div>
+                <div class="case-studies-block__cards__2--text">
+                    <p> This is a Case study highlighting a project worked on </p>
+                </div>
+            </div>
+            <div class="case-studies-block__cards__3">
+                <div class="case-studies-block__cards__3--img">
+                    <img src="{% static 'img/Screenshot 2023-11-27 at 10-25-23 Photo by Getty Images on Unsplash.png' %}"
+                        alt="">
+                </div>
+                <div class="case-studies-block__cards__3--text">
+                    <p> This is a Case study highlighting a project worked on </p>
+                </div>
+            </div>
+        </div>
+        <div class="case-studies-block--button">
+            <button> View All </button>
+        </div>
+    </div>
+    <div class="newsletter-block">
+        <div class="newsletter-block--title">
+            <p> We are ready when you are. </p>
+            <p> Contact us today. </p>
+        </div>
+        <div class="newsletter-block--button">
+            <button> Get in touch today </button>
+        </div>
+    </div>
+</div>
+{% endblock content %}
